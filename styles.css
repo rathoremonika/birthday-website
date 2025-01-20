@@ -59,6 +59,19 @@ body {
     text-align: center;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .messages-container {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on medium-sized screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .messages-container {
+        grid-template-columns: 1fr;  /* 1 column on smaller screens */
+    }
+}
+
 /* Photo Collage Section */
 .photo-collage {
     text-align: center;
