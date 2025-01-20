@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     messages.forEach((message, index) => {
         setTimeout(() => {
             message.style.opacity = "1";
-        }, index * 2000);
+        }, index * 3000); // Show each message every 3 seconds
     });
 });
+
