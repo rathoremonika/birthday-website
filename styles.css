@@ -30,41 +30,40 @@ body {
     color: #333; /* Neutral color for the paragraph text */
 }
 
-/* Messages Section */
+/* Container for Messages - Grid Layout */
 .messages-container {
-    margin: 20px auto;
+    margin: 30px auto;
     padding: 20px;
-    width: 80%;
-    background: #ffffffcc;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* Update Message Background */
-.message-card {
-    background: rgba(255, 255, 255, 0.8);  /* Semi-transparent white */
-    color: #333;  /* Dark text for contrast */
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 1.2em;
     width: 90%;
-    max-width: 500px;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(50px);
-    transition: all 0.6s ease-in-out;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 tiles per row */
+    gap: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
 }
 
-.message-card.visible {
-    opacity: 1;
-    transform: translateY(0); /* Slide to original position */
+/* Message Cards */
+.message-card {
+    background: rgba(255, 255, 255, 0.9);  /* Slight transparency */
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);  /* 3D effect */
+    font-size: 1.1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Message Font - Use a cool calligraphy font */
+/* Hover Effect for 3D Look */
+.message-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);  /* Deeper shadow on hover */
+}
+
+/* Message Card Font */
 .message-card p {
-    font-family: 'Dancing Script', cursive;  /* Caligraphy-like font */
+    font-family: 'Dancing Script', cursive; /* Stylish font */
     color: #333;
 }
 
@@ -97,7 +96,52 @@ body {
     object-fit: cover;
 }
 
-/* Balloon Animation */
+/* Balloon Container */
+.balloons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Balloon */
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    background-color: #f7b7a3;
+    width: 80px;
+    height: 100px;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.balloon:nth-child(odd) {
+    background-color: #ff6f61;
+}
+
+.balloon:nth-child(even) {
+    background-color: #a8d8ea;
+}
+
+/* Balloon Threads */
+.balloon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background-color: #3d3d3d;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    animation: float-thread 6s ease-in-out infinite;
+}
+
+/* Floating Effect for Balloons */
 @keyframes float {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -110,58 +154,39 @@ body {
     }
 }
 
-.balloons {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.balloon {
-    position: absolute;
-    bottom: -100px;
-    background-color: #f7b7a3;
-    width: 80px;
-    height: 100px;
-    border-radius: 50%;
-    animation: float 4s ease-in-out infinite;
-    opacity: 0.9;
-}
-
-.balloon:nth-child(odd) {
-    background-color: #ff6f61;
-}
-
-.balloon:nth-child(even) {
-    background-color: #a8d8ea;
+/* Floating Effect for Threads */
+@keyframes float-thread {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh); /* Makes the thread move from bottom to top */
+    }
 }
 
 .balloon:nth-child(1) {
     left: 10%;
-    animation-duration: 5s;
+    animation-duration: 7s;
 }
 
 .balloon:nth-child(2) {
     left: 30%;
-    animation-duration: 6s;
+    animation-duration: 5s;
 }
 
 .balloon:nth-child(3) {
     left: 50%;
-    animation-duration: 4.5s;
+    animation-duration: 6s;
 }
 
 .balloon:nth-child(4) {
     left: 70%;
-    animation-duration: 5s;
+    animation-duration: 7s;
 }
 
 .balloon:nth-child(5) {
     left: 90%;
-    animation-duration: 6s;
+    animation-duration: 6.5s;
 }
 
 /* Candlelight Effect */
