@@ -39,13 +39,6 @@ body {
     text-align: center;
 }
 
-.messages-container h2 {
-    font-family: 'Pacifico', cursive;
-    color: #e66767;
-    margin-bottom: 15px;
-}
-
-/* Message Cards */
 .message-card {
     background: #f8c291;
     margin: 10px auto;
@@ -56,15 +49,14 @@ body {
     color: #333;
     width: 90%;
     max-width: 500px;
-    opacity: 0; /* Initially hidden for animation */
-    transform: translateY(50px);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Slide down */
     transition: all 0.6s ease-in-out;
 }
 
-/* Animation - Slide In */
 .message-card.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0); /* Slide to original position */
 }
 
 /* Photo Collage */
