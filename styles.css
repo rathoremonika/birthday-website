@@ -120,14 +120,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.balloon:nth-child(odd) {
-    background-color: #ff6f61;
-}
-
-.balloon:nth-child(even) {
-    background-color: #a8d8ea;
-}
-
 /* Balloon Threads */
 .balloon::after {
     content: '';
