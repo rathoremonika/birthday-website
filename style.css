@@ -1,63 +1,109 @@
+/* General Styles */
 body {
-    font-family: 'Arial, sans-serif';
     margin: 0;
-    padding: 0;
-    background-color: #fdf6e3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ffe9e9, #ffe6f5);
+    color: #333;
+    text-align: center;
 }
 
-.container {
-    text-align: center;
-    padding: 20px;
+/* Banner Section */
+.banner {
+    background: linear-gradient(135deg, #ff6f91, #ff9a8b);
+    color: white;
+    padding: 30px 20px;
     border-radius: 10px;
-    background: #fffcf2;
+    margin: 20px;
+}
+
+.banner h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5em;
+    animation: fadeInDown 2s;
+}
+
+.banner p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    animation: fadeInUp 2s;
+}
+
+/* Messages Section */
+.messages-container {
+    margin: 20px 10px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 5px solid #ff9a8b;
-}
-
-.happy-birthday {
-    font-size: 2.5em;
-    color: #ff6f61;
-    margin: 10px 0;
-    animation: fadeIn 2s;
-}
-
 .message {
-    font-size: 1.2em;
-    color: #333;
+    font-size: 1.5em;
+    color: #555;
     opacity: 0;
-    margin: 5px 0;
-    animation: fadeIn 2s forwards;
+    animation: slideIn 2s ease-in forwards;
+    margin: 10px 0;
 }
 
-.message:nth-child(1) {
-    animation-delay: 2s;
+/* Photo Collage */
+.photo-collage {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.message:nth-child(2) {
-    animation-delay: 4s;
+.photo-collage h2 {
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 15px;
+    color: #ff6f91;
 }
 
-.message:nth-child(3) {
-    animation-delay: 6s;
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-@keyframes fadeIn {
+.photos img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Animations */
+@keyframes fadeInDown {
     from {
         opacity: 0;
+        transform: translateY(-50px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
