@@ -179,10 +179,41 @@ body {
     animation-duration: 6.5s;
 }
 
-/* Customize audio player if needed */
+/* Audio Messages Section */
+.audio-messages {
+    background-color: #f8f9fa;  /* Light background for contrast */
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.audio-messages h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    color: #ff6a00;  /* Bright color to highlight */
+    margin-bottom: 30px;
+}
+
+.audio-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.audio-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Customize audio player */
 audio {
-    width: 100%; /* Makes audio player width fit the container */
-    margin-top: 10px;
+    width: 80%;  /* Make the audio player fit the container */
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
