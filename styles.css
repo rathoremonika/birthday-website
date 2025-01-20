@@ -110,12 +110,13 @@ body {
 }
 
 .photos img {
-    width: 200px;  /* Increased photo size */
-    height: 200px;
-    object-fit: cover;
+    width: 100%;
+    height: 200px;  /* Adjust this height as needed */
+    object-fit: contain;  /* Ensures the entire photo fits without cropping */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Balloons Section */
 .balloons {
