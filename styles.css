@@ -43,7 +43,7 @@ body {
 
 /* Update Message Background */
 .message-card {
-    background: #fff9e6;  /* Light yellow background */
+    background: rgba(255, 255, 255, 0.8);  /* Semi-transparent white */
     color: #333;  /* Dark text for contrast */
     margin: 10px auto;
     padding: 15px;
