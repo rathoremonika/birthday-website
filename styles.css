@@ -95,6 +95,73 @@ body {
     object-fit: cover;
 }
 
+/* Balloon Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.balloons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    background-color: #f7b7a3;
+    width: 60px;
+    height: 80px;
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+.balloon:nth-child(odd) {
+    background-color: #ff6f61;
+}
+
+.balloon:nth-child(even) {
+    background-color: #a8d8ea;
+}
+
+.balloon:nth-child(1) {
+    left: 10%;
+    animation-duration: 4s;
+}
+
+.balloon:nth-child(2) {
+    left: 30%;
+    animation-duration: 5s;
+}
+
+.balloon:nth-child(3) {
+    left: 50%;
+    animation-duration: 6s;
+}
+
+.balloon:nth-child(4) {
+    left: 70%;
+    animation-duration: 4.5s;
+}
+
+.balloon:nth-child(5) {
+    left: 90%;
+    animation-duration: 5.5s;
+}
+
 /* Animations */
 @keyframes fadeInDown {
     from {
