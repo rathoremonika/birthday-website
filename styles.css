@@ -36,7 +36,7 @@ body {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 30px;
     padding: 20px;
 }
@@ -46,6 +46,7 @@ body {
     width: 250px;
     height: 350px;
     perspective: 1000px;
+    margin-bottom: 30px;
 }
 
 .card-inner {
@@ -65,7 +66,7 @@ body {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border: 5px solid #f7b731;
+    border: 2px solid rgba(255, 255, 0, 0.7); /* Yellow border */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     display: flex;
@@ -77,7 +78,6 @@ body {
 .card-front {
     color: #333;
     background: rgba(240, 248, 255, 0.9); /* Very light pastel blue */
-    border: 2px solid rgba(255, 255, 0, 0.7); /* Yellow border */
     background-image: url('path_to_balloon_or_graphitti_image.jpg'); /* Optional background image */
     background-size: cover;
     background-position: center;
@@ -108,16 +108,16 @@ body {
 .photos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 20px;
 }
 
 .photos img {
-    width: 100%;  /* Ensures images fill the container */
-    height: 100%;  /* Ensures images fill the container */
-    object-fit: cover;  /* Ensures the image is cropped to cover the entire area */
-    border-radius: 10px; /* Optional, if you want rounded corners */
-    box-shadow: none;  /* Removes the box-shadow */
+    width: 200px;  /* Increased photo size */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Balloons Section */
@@ -134,12 +134,42 @@ body {
 .balloon {
     position: absolute;
     bottom: -100px;
-    background-color: #f7b7a3;
+    background-color: #a2d5f2;  /* Light blue balloon */
     width: 80px;
     height: 100px;
     border-radius: 50%;
     animation: float 6s ease-in-out infinite;
     opacity: 0.9;
+}
+
+.balloon:nth-child(1) {
+    left: 10%;
+    background-color: #a2d5f2;  /* Light blue */
+    animation-duration: 7s;
+}
+
+.balloon:nth-child(2) {
+    left: 30%;
+    background-color: #f1c6c6;  /* Light pink */
+    animation-duration: 5s;
+}
+
+.balloon:nth-child(3) {
+    left: 50%;
+    background-color: #d1f0c2;  /* Light green */
+    animation-duration: 6s;
+}
+
+.balloon:nth-child(4) {
+    left: 70%;
+    background-color: #ffeb99;  /* Light yellow */
+    animation-duration: 7s;
+}
+
+.balloon:nth-child(5) {
+    left: 90%;
+    background-color: #f1c6c6;  /* Light pink */
+    animation-duration: 6.5s;
 }
 
 .balloon::after {
@@ -173,31 +203,6 @@ body {
     100% {
         transform: translateY(-100vh);
     }
-}
-
-.balloon:nth-child(1) {
-    left: 10%;
-    animation-duration: 7s;
-}
-
-.balloon:nth-child(2) {
-    left: 30%;
-    animation-duration: 5s;
-}
-
-.balloon:nth-child(3) {
-    left: 50%;
-    animation-duration: 6s;
-}
-
-.balloon:nth-child(4) {
-    left: 70%;
-    animation-duration: 7s;
-}
-
-.balloon:nth-child(5) {
-    left: 90%;
-    animation-duration: 6.5s;
 }
 
 /* Audio Messages Section */
@@ -252,12 +257,21 @@ footer {
         width: 100%;
         height: 200px;
     }
+
+    .balloons {
+        bottom: 0;
+    }
+
+    .balloon {
+        width: 60px;
+        height: 80px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
     .gallery {
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     .card {
@@ -274,7 +288,7 @@ footer {
 @media (min-width: 1201px) {
     .gallery {
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     .card {
