@@ -9,23 +9,25 @@ body {
 
 /* Banner Section */
 .banner {
-    background: linear-gradient(135deg, #ff6f91, #ff9a8b);
+    background: linear-gradient(135deg, #f8c291, #fad390); /* Gradient background */
     color: white;
-    padding: 30px 20px;
+    padding: 40px 20px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .banner h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 2.5em;
-    animation: fadeInDown 2s;
+    font-size: 3em; /* Larger font for better visibility */
+    margin-bottom: 10px;
+    color: #ff6f61; /* Red for the title */
 }
 
 .banner p {
     font-size: 1.2em;
-    margin-top: 10px;
-    animation: fadeInUp 2s;
+    color: #333; /* Neutral color for the paragraph text */
 }
 
 /* Messages Section */
@@ -39,9 +41,9 @@ body {
     text-align: center;
 }
 
-/* Message Cards */
+/* Update Message Background */
 .message-card {
-    background: #f8c291;  /* Light background for the tile */
+    background: #fff9e6;  /* Light yellow background */
     color: #333;  /* Dark text for contrast */
     margin: 10px auto;
     padding: 15px;
@@ -50,20 +52,20 @@ body {
     font-size: 1.2em;
     width: 90%;
     max-width: 500px;
-    opacity: 0; /* Initially hidden for animation */
+    opacity: 0; /* Initially hidden */
     transform: translateY(50px);
     transition: all 0.6s ease-in-out;
 }
 
-/* Visible Animation */
 .message-card.visible {
     opacity: 1;
     transform: translateY(0); /* Slide to original position */
 }
 
-/* Better contrast for messages */
+/* Message Font - Use a cool calligraphy font */
 .message-card p {
-    color: #333; /* Dark text */
+    font-family: 'Dancing Script', cursive;  /* Caligraphy-like font */
+    color: #333;
 }
 
 /* Photo Collage */
