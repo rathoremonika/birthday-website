@@ -76,7 +76,7 @@ body {
 
 .card-front {
     color: #333;
-    background: rgba(0, 123, 255, 0.3);  /* Transparent blue background */
+    background: rgba(173, 216, 230, 0.2);
     background-image: url('path_to_balloon_or_graphitti_image.jpg');  /* Add background image for balloons/graphitti */
     background-size: cover;  /* Ensures the background image covers the entire card */
     background-position: center;  /* Ensures the background image is centered */
