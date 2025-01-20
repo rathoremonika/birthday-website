@@ -76,17 +76,16 @@ body {
 
 .card-front {
     color: #333;
-    background: rgba(173, 216, 230, 0.2);
-    background-image: url('path_to_balloon_or_graphitti_image.jpg');  /* Add background image for balloons/graphitti */
-    background-size: cover;  /* Ensures the background image covers the entire card */
-    background-position: center;  /* Ensures the background image is centered */
+    background: rgba(240, 248, 255, 0.9); /* Very light pastel blue */
+    border: 2px solid rgba(255, 255, 0, 0.7); /* Yellow border */
+    background-image: url('path_to_balloon_or_graphitti_image.jpg'); /* Optional background image */
+    background-size: cover;
+    background-position: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
     line-height: 1.4;
     padding: 20px;
-    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    border-radius: 10px;  /* Optional: rounded corners */
 }
 
 .card-back {
