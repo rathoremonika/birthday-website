@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const messages = document.querySelectorAll(".message");
+    const messages = document.querySelectorAll(".message-card");
     messages.forEach((message, index) => {
         setTimeout(() => {
-            message.style.opacity = "1";
-        }, index * 3000); // Show each message every 3 seconds
+            message.classList.add("visible");
+        }, index * 1000); // Stagger messages by 1 second
     });
 });
 
